@@ -1,0 +1,15 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.services {
+  &__nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: rem(52);
+  }
+
+  &__btn.btn {
+    display: none;
+  }
+}

@@ -76,6 +76,10 @@ h3 {
   text-transform: capitalize;
 }
 
+p {
+  line-height: 1.6;
+}
+
 input,
 textarea {
   font-size: clamp(16px, 2.5vw, 20px);

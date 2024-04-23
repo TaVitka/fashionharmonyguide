@@ -1,0 +1,24 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.hero {
+  $root: &;
+  padding: 0;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding: rem(130) 0 rem(60);
+    min-height: 870px;
+    background-position: 100% 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    max-width: 574px;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

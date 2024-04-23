@@ -1,0 +1,37 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.about {
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+  }
+
+  &__img {
+    margin-right: 24px;
+    border-radius: var(--radius-main);
+  }
+
+  &__content {
+    padding: rem(38);
+
+    .about__texts {
+      width: 95%;
+      margin-bottom: rem(26);
+    }
+  }
+
+  h2 {
+    margin-bottom: 24px;
+  }
+
+  &__accent {
+    padding: rem(38) rem(40);
+    border-right: var(--radius-main);
+    background: var(--gradient-pink);
+
+    text-align: center;
+  }
+}

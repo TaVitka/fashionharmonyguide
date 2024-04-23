@@ -11,12 +11,12 @@ h3,
   span {
     font-style: italic;
     line-height: inherit;
+    letter-spacing: inherit;
   }
 }
 
 h1,
 h2 {
-  letter-spacing: -10px;
   text-transform: uppercase;
 }
 
@@ -37,6 +37,7 @@ h1 {
   font-size: clamp(60px, 9vw, 122px);
   line-height: .9;
   color: var(--color-white);
+  letter-spacing: -.54rem;
 
   span {
     font-weight: var(--fw-100);
@@ -44,7 +45,8 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(46px, 1vw, 92px);
+  font-size: clamp(46px, 7vw, 92px);
+  letter-spacing: -0.4rem;
 }
 
 h3 {

@@ -35,6 +35,14 @@
     }
   }
 
+  &--dark {
+    color: var(--color-black) !important;
+  }
+
+  &--large {
+    font-size: clamp(20px, 2vw, 24px);
+  }
+
   //&--reverse {
   //  padding: 22px;
   //

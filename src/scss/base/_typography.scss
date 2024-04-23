@@ -1,0 +1,89 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+h1,
+h2,
+h3,
+.name {
+  overflow: hidden;
+  font-weight: var(--fw-200);
+}
+
+h1,
+h2 {
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+h2,
+h3,
+.name,
+.details {
+  line-height: 1.17;
+
+}
+
+h2,
+h3 {
+  span {
+    font-style: italic;
+  }
+}
+
+h3,
+.name {
+  color: var(--color-dark);
+  font-style: italic;
+}
+
+h1 {
+  font-size: clamp(60px, 2vw, 122px);
+  line-height: .9;
+  color: var(--color-white);
+}
+
+h2 {
+  font-size: clamp(46px, 1vw, 92px);
+}
+
+h3 {
+  font-size: clamp(22px, 1vw, 40px);
+  text-transform: capitalize;
+}
+
+.name {
+  font-size: clamp(20px, 1vw, 32px);
+}
+
+.details {
+  font-size: 18px;
+  font-weight: var(--fw-300);
+  color: var(--color-black);
+}
+
+.text {
+  font-size: 18px;
+}
+
+.desc {
+  font-size: clamp(22px, 1vw, 40px);
+  line-height: 1.6;
+  font-weight: var(--fw-300);
+  color: var(--color-gray-180);
+  text-transform: capitalize;
+}
+
+input,
+textarea {
+  font-size: clamp(16px, 1vw, 20px);
+  line-height: 1.6;
+  color: var(--color-dark-886);
+
+  &::placeholder {
+    color: var(--color-gray-730);
+  }
+}
+
+.copyright {
+  text-transform: uppercase;
+}

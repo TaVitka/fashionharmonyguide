@@ -12,7 +12,7 @@ body {
   font-family: var(--font-family-primary);
   font-weight: var(--fw-300);
   font-style: normal;
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: clamp(16px, 2.5vw, 20px);
   line-height: 1.6;
   letter-spacing: 0;
   color: var(--color-dark-886);
@@ -52,7 +52,7 @@ section {
 }
 
 .main {
-  padding-top: var(--header-height);
+  //padding-top: var(--header-height);
 }
 
 .overlay {

@@ -1,0 +1,76 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins"as*;
+
+*[class].btn {
+  display: inline-block;
+  margin: 0;
+  padding: 6px 14px;
+  border: 2px solid transparent;
+  font-family: var(--font-family-primary);
+  font-weight: var(--fw-300);
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-style: italic;
+  line-height: 1.6;
+  color: var(--color-gray-180) !important;
+  text-align: center;
+  text-transform: capitalize;
+  border-radius: var(--radius-btn);
+  background: var(--gradient-btn);
+  transition-property: background, color, border-color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+
+  &--reverse,
+  &:hover {
+    color: var(--color-black) !important;
+    background: var(--gradient-pink);
+    border-color: var(--color-white);
+  }
+
+  &--bordered {
+    border: 2px solid var(--color-white);
+
+    &:hover {
+      border-color: var(--color-brown-400);
+    }
+  }
+
+  //&--reverse {
+  //  padding: 22px;
+  //
+  //  &:hover {
+  //    background-color: var(--color-milk-100);
+  //    color: var(--color-gray-700) !important;
+  //  }
+  //}
+}
+
+//*[class].swiper {
+//  .swiper-button {
+//    width: 64px;
+//    height: 64px;
+//    background-color: var(--color-gray-700);
+//    border-radius: var(--radius-round);
+//    top: 50%;
+//    transform: translateY(-50%);
+//
+//    &::after {
+//      @include contain-background();
+//
+//      content: '';
+//      position: absolute;
+//      height: 20px;
+//      width: 26px;
+//      top: 50%;
+//      left: 50%;
+//      transform: translate(-50%, -50%);
+//      background-image: var(--icon-swiper);
+//    }
+//  }
+//
+//  .swiper-button-prev {
+//    &::after {
+//      transform: translate(-50%, -50%) rotate(180deg);
+//    }
+//  }
+//}

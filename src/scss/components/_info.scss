@@ -2,6 +2,10 @@
 @use "../utils/mixins/"as*;
 
 .info {
+  &__title {
+    margin-bottom: rem(52);
+  }
+
   &__items {
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -27,6 +31,32 @@
 
     img {
       margin-bottom: 24px;
+    }
+  }
+
+  img {
+    border-radius: var(--radius-main);
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-of-type) {
+      margin-bottom: rem(52);
+    }
+
+    div {
+      padding: 32px;
+    }
+
+    h3,
+    p:not(:last-of-type) {
+      margin-bottom: 24px;
+    }
+
+    &--reverse {
+      flex-direction: row-reverse;
     }
   }
 }

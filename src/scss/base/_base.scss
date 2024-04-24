@@ -27,6 +27,12 @@ body {
   &.open {
     overflow: hidden;
   }
+
+  &--about {
+    .about__content .btn {
+      display: none;
+    }
+  }
 }
 
 section {
@@ -88,9 +94,9 @@ section {
     height: 23px;
     transform: translateY(-50%);
     background-image: url("../images/icons/mail-icon.svg");
+  }
 
-    &--red {
-      filter: brightness(0) saturate(100%) invert(52%) sepia(91%) saturate(2368%) hue-rotate(327deg) brightness(100%) contrast(102%);
-    }
+  &--red::before {
+    filter: brightness(0) saturate(100%) invert(52%) sepia(91%) saturate(2368%) hue-rotate(327deg) brightness(100%) contrast(102%);
   }
 }

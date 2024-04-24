@@ -27,4 +27,14 @@
       padding-top: rem(168);
     }
   }
+
+  &--blog {
+    .hero__inner {
+      padding-top: rem(220);
+    }
+
+    h1 {
+      max-width: 575px;
+    }
+  }
 }

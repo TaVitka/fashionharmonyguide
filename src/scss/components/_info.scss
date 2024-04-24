@@ -16,13 +16,21 @@
 
   &__item {
     &--text {
-      max-width: 493px;
+      max-width: 492px;
       width: 100%;
+    }
+
+    img {
+      margin-bottom: 24px;
     }
   }
 
   &__content {
     padding: rem(38);
+
+    &:first-child {
+      margin-bottom: 24px;
+    }
 
     h3 {
       margin-bottom: 24px;

@@ -72,6 +72,11 @@
     &--bottomed {
       bottom: 70px;
     }
+
+    &--centered {
+      top: 36%;
+      bottom: unset;
+    }
   }
 
   .swiper-button-prev {

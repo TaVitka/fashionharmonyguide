@@ -54,7 +54,8 @@
     }
   }
 
-  &__blog {
+  &__blog,
+  &__event {
     img {
       margin-bottom: 0;
     }
@@ -71,8 +72,52 @@
       width: max-content;
       transform: translateX(-50%);
       z-index: 2;
+    }
+  }
+
+  &__blog {
+    .slider__content {
       border-bottom-right-radius: 0;
       border-bottom-left-radius: 0;
+    }
+  }
+
+  &__event {
+    .slider__content {
+      max-width: 870px;
+      width: 100%;
+      bottom: 32px;
+    }
+
+    .swiper-button.swiper-button--bottomed {
+      bottom: 124px;
+    }
+  }
+
+  &__outfit {
+    padding-inline: rem(52);
+
+    .slider__item {
+      background: transparent;
+    }
+
+    img {
+      border-radius: var(--radius-main);
+    }
+
+    .slider__content {
+      padding-inline: 16px 0;
+      text-align: left;
+
+      h3 {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &--outfit {
+    h2 {
+      margin-bottom: 24px;
     }
   }
 }

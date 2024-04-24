@@ -72,3 +72,25 @@ section {
     }
   }
 }
+
+.mail {
+  position: relative;
+  padding-left: 30px;
+
+  &::before {
+    @include contain-background;
+
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 20px;
+    height: 23px;
+    transform: translateY(-50%);
+    background-image: url("../images/icons/mail-icon.svg");
+
+    &--red {
+      filter: brightness(0) saturate(100%) invert(52%) sepia(91%) saturate(2368%) hue-rotate(327deg) brightness(100%) contrast(102%);
+    }
+  }
+}

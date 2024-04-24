@@ -1,0 +1,119 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.footer {
+  padding: 0;
+
+  &__wrapper {
+    padding: rem(52) 0;
+    background-color: var(--color-brown-400);
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+    gap: clamp(24px, 9vw, 128px);
+  }
+
+  &__subscribe {
+    max-width: 389px;
+    width: 100%;
+
+    .logo {
+      display: inline-block;
+      margin-bottom: 30px;
+    }
+
+    p {
+      color: var(--color-white);
+      text-transform: uppercase;
+      letter-spacing: -.065rem;
+
+      &:last-of-type {
+        margin-bottom: 8px;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    input {
+      background-color: var(--color-white);
+    }
+
+    .btn {
+      width: fit-content;
+      border: none;
+    }
+  }
+
+  &__name {
+    display: block;
+    margin-bottom: 34px;
+    color: var(--color-white);
+    text-transform: uppercase;
+    letter-spacing: -0.06rem;
+  }
+
+  &__nav {
+    max-width: 284px;
+    width: 100%;
+    color: var(--color-white);
+  }
+
+  &__link {
+    position: relative;
+    padding-left: 17px;
+
+    &:not(:last-of-type) {
+      margin-bottom: 16px;
+    }
+
+    &::before {
+      @include contain-background;
+
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 23px;
+      width: 7px;
+      transform: translateY(-50%);
+      background-image: url("../images/icons/more-icon.svg");
+    }
+
+    a {
+      letter-spacing: -0.06rem
+    }
+  }
+
+  .mail {
+    color: var(--color-white);
+  }
+
+  &__bottom {
+    padding: 18px;
+    color: var(--color-white);
+    background-color: var(--color-gray-800);
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    a {
+      text-transform: uppercase;
+      letter-spacing: -0.05rem;
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

@@ -82,9 +82,14 @@ p {
 
 input,
 textarea {
+  min-width: 100%;
+  padding: 13px 18px 15px;
   font-size: clamp(16px, 2.5vw, 20px);
   line-height: 1.6;
   color: var(--color-dark-886);
+  background-color: var(--color-white);
+  border: none;
+  border-radius: var(--radius-main);
 
   &::placeholder {
     text-transform: capitalize;
@@ -94,4 +99,5 @@ textarea {
 
 .copyright {
   text-transform: uppercase;
+  letter-spacing: -0.05rem;
 }

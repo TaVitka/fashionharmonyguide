@@ -29,25 +29,6 @@
     }
   }
 
-  &__mail {
-    position: relative;
-    padding-left: 30px;
-
-    &::before {
-      @include contain-background;
-
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 0;
-      width: 20px;
-      height: 23px;
-      transform: translateY(-50%);
-      background-image: url("../images/icons/mail-icon.svg");
-      filter: brightness(0) saturate(100%) invert(52%) sepia(91%) saturate(2368%) hue-rotate(327deg) brightness(100%) contrast(102%);
-    }
-  }
-
   &__form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -63,18 +44,8 @@
       grid-column: span 2;
     }
 
-    input,
-    textarea {
-      min-width: 100%;
-      padding: 13px 18px 15px;
-      background-color: var(--color-white);
-      border: none;
-      border-radius: var(--radius-main);
-    }
-
     textarea {
       min-height: 150px;
-      //margin-bottom: 4px;
       resize: none;
     }
 

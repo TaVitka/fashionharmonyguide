@@ -1,0 +1,13 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.reviews {
+  &__intro {
+    margin-bottom: rem(52);
+    text-align: center;
+
+    h2 {
+      margin-bottom: 18px;
+    }
+  }
+}

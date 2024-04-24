@@ -23,8 +23,20 @@
     padding-inline: 32px;
   }
 
-  h3 {
+  h3:not(.name) {
     margin-bottom: 24px;
+  }
+
+  .name {
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  .details {
+    display: inline-block;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+    letter-spacing: -1px;
   }
 
   .btn {
@@ -32,5 +44,15 @@
     width: 100%;
     margin-inline: auto;
     align-self: flex-end;
+  }
+
+  &__reviews {
+    .box__item {
+      padding-bottom: 0;
+    }
+
+    .box__content {
+      padding: 24px;
+    }
   }
 }

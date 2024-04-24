@@ -5,7 +5,7 @@
   display: inline-block;
   margin: 0;
   padding: 6px 14px;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   font-family: var(--font-family-primary);
   font-weight: var(--fw-300);
   font-size: clamp(16px, 2.5vw, 20px);
@@ -20,11 +20,20 @@
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
 
-  &--reverse,
   &:hover {
     color: var(--color-black) !important;
     background: var(--gradient-pink);
     border-color: var(--color-white);
+  }
+
+  &--reverse {
+    border: 1px solid var(--color-gray-200);
+    background: var(--color-gray-880);
+
+    &:hover {
+      background: var(--gradient-grey);
+      border-color: var(--color-gray-200);
+    }
   }
 
   &--bordered {
@@ -53,14 +62,15 @@
     height: 48px;
     background-image: url("../images/icons/arrow-icon.svg");
     border-radius: var(--radius-round);
+    top: unset;
+    bottom: 124px;
 
     &::after {
       display: none;
     }
 
     &--bottomed {
-      top: unset;
-      bottom: 124px;
+      bottom: 70px;
     }
   }
 

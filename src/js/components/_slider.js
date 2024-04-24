@@ -18,4 +18,5 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   const swiperClient = new Swiper('.slider__client', options);
+  const swiperBlog = new Swiper('.slider__blog', options);
 });

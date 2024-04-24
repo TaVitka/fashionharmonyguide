@@ -87,6 +87,7 @@ textarea {
   color: var(--color-dark-886);
 
   &::placeholder {
+    text-transform: capitalize;
     color: var(--color-gray-730);
   }
 }

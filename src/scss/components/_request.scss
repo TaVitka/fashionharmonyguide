@@ -1,0 +1,91 @@
+@use "../utils/functions/"as*;
+@use "../utils/mixins/"as*;
+
+.request {
+  max-width: 1440px;
+  width: 100%;
+  padding-bottom: 258px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+
+  &__inner {
+    display: flex;
+  }
+
+  &__content {
+    max-width: 515px;
+    width: 100%;
+    margin-right: clamp(24px, 8vw, 106px);
+
+    h2 {
+      line-height: 1.12;
+      margin-bottom: 24px;
+    }
+
+    p {
+      margin-bottom: 24px;
+      width: 95%;
+    }
+  }
+
+  &__mail {
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      @include contain-background;
+
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 20px;
+      height: 23px;
+      transform: translateY(-50%);
+      background-image: url("../images/icons/mail-icon.svg");
+      filter: brightness(0) saturate(100%) invert(52%) sepia(91%) saturate(2368%) hue-rotate(327deg) brightness(100%) contrast(102%);
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+    max-width: 596px;
+    width: 100%;
+    padding: 34px 32px;
+    background: var(--gradient-pink);
+    border-radius: var(--radius-main);
+
+    .request__textarea,
+    .btn--send {
+      grid-column: span 2;
+    }
+
+    input,
+    textarea {
+      min-width: 100%;
+      padding: 13px 18px 15px;
+      background-color: var(--color-white);
+      border: none;
+      border-radius: var(--radius-main);
+    }
+
+    textarea {
+      min-height: 150px;
+      //margin-bottom: 4px;
+      resize: none;
+    }
+
+    .btn {
+      width: fit-content;
+      margin-left: 74px;
+      font-size: clamp(20px, 2.5vw, 30px);
+      line-height: 1.17;
+      letter-spacing: -.07rem;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+  }
+}

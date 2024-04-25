@@ -33,6 +33,12 @@ body {
       display: none;
     }
   }
+
+  &--no-hero {
+    .main {
+      padding-top: var(--header-height);
+    }
+  }
 }
 
 section {

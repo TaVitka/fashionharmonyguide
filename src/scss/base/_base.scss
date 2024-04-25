@@ -82,7 +82,7 @@ section {
   @include media(tablet) {
     &::before {
       background-color: var(--color-dark-886);
-      opacity: .7;
+      opacity: .8;
     }
   }
 }

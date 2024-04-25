@@ -41,5 +41,11 @@
       display: block;
       background: var(--gradient-pink);
     }
+
+    &--reviews {
+      .services__nav {
+        text-align: left;
+      }
+    }
   }
 }

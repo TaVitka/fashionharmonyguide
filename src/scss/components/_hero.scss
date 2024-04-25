@@ -27,7 +27,8 @@
     margin-bottom: 20px;
   }
 
-  &--portfolio {
+  &--portfolio,
+  &--services {
     .hero__inner {
       padding-top: rem(168);
     }
@@ -54,8 +55,8 @@
       padding: rem(52) 0;
     }
 
-
     &--portfolio,
+    &--services,
     &--blog {
       .hero__inner {
         padding: rem(52) 0;

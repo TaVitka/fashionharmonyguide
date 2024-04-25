@@ -5,15 +5,15 @@
   padding: rem(52) 0 0;
 
   &__nav {
-    padding-bottom: 24px;
+    padding-bottom: clamp(16px, 2vw, 24px);
 
     h1,
     p {
-      margin-bottom: 24px;
+      margin-bottom: clamp(16px, 2vw, 24px);
     }
 
     h1 {
-      font-size: clamp(46px, 7vw, 92px);
+      font-size: clamp(38px, 7vw, 92px);
       letter-spacing: -0.4rem;
       color: var(--color-black);
     }
@@ -51,12 +51,18 @@
     }
   }
 
+  &__image {
+    img {
+      margin-inline: auto;
+    }
+  }
+
   &__body {
     padding: rem(52) 0;
 
-    & > *:not(last-child),
+    & > *:not(:last-child),
     li:not(:last-of-type) p {
-      margin-bottom: 32px;
+      margin-bottom: clamp(16px, 3vw, 32px);
     }
 
     ul,
@@ -71,8 +77,25 @@
   }
 
   &__subtitle {
-    margin-bottom: 32px;
-    font-size: clamp(46px, 7vw, 72px);
+    margin-bottom: clamp(24px, 2vw, 32px);
+    font-size: clamp(28px, 5vw, 72px);
     line-height: 1.17;
+  }
+
+  @include media(tablet) {
+    padding: rem(30) 0 0;
+
+    img {
+      height: auto;
+    }
+
+    &__body {
+      padding: clamp(16px, 2vw, 24px) 0 0;
+    }
+
+    h1,
+    h2 {
+      letter-spacing: 0;
+    }
   }
 }

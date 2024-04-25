@@ -12,8 +12,13 @@
     padding: rem(130) 0 rem(60);
     min-height: 870px;
     background-position: 100% 0;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
   }
 
   h1 {
@@ -35,6 +40,26 @@
 
     h1 {
       max-width: 575px;
+    }
+  }
+
+  @include media(tablet-wide) {
+    .hero__inner {
+      min-height: 350px;
+    }
+  }
+
+  @include media(tablet) {
+    .hero__inner {
+      padding: rem(52) 0;
+    }
+
+
+    &--portfolio,
+    &--blog {
+      .hero__inner {
+        padding: rem(52) 0;
+      }
     }
   }
 }

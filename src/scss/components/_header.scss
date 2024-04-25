@@ -15,6 +15,10 @@
     transform: translateY(-100%);
   }
 
+  &.scroll {
+    background-color: var(--color-gray-800);
+  }
+
   @include media(tablet) {
     background-color: var(--color-gray-800);
   }

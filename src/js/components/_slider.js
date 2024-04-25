@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let options = {
     slidesPerView: 1,
+    spaceBetween: 16,
     speed: 700,
     autoplay: {
       delay: 50000,

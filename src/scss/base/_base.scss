@@ -64,7 +64,9 @@ section {
 }
 
 .main {
-  //padding-top: var(--header-height);
+  @include media(tablet) {
+    padding-top: var(--header-height);
+  }
 }
 
 .overlay {
@@ -75,18 +77,19 @@ section {
     position: absolute;
     z-index: 1;
     inset: 0;
-    background: var(--gradient-main);
   }
 
   @include media(tablet) {
     &::before {
-      background: var(--gradient-intense);
+      background-color: var(--color-dark-886);
+      opacity: .7;
     }
   }
 }
 
 .mail {
   position: relative;
+  display: block;
   padding-left: 30px;
 
   &::before {

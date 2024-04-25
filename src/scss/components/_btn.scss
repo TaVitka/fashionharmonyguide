@@ -14,6 +14,7 @@
   color: var(--color-gray-180) !important;
   text-align: center;
   text-transform: capitalize;
+  white-space: nowrap;
   border-radius: var(--radius-btn);
   background: var(--gradient-btn);
   transition-property: background, color, border-color;
@@ -50,7 +51,7 @@
   }
 
   &--large {
-    font-size: clamp(20px, 2vw, 24px);
+    font-size: clamp(18px, 3vw, 24px);
   }
 }
 
@@ -86,5 +87,34 @@
   .swiper-button-next {
     right: 76px;
     transform: rotate(180deg);
+  }
+
+  @include media(tablet-wide) {
+    .swiper-button {
+      bottom: 50%;
+      transform: translateY(-50%);
+    }
+
+    .swiper-button-prev {
+      left: 16px;
+    }
+
+    .swiper-button-next {
+      right: 16px;
+      transform: translateY(-50%) rotate(180deg);
+    }
+  }
+
+  @include media(mobile-l) {
+    .swiper-button {
+      width: 28px;
+      height: 28px;
+      bottom: unset;
+      top: 30%;
+
+      &--bottomed {
+        top: 50%;
+      }
+    }
   }
 }

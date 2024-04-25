@@ -12,4 +12,34 @@
   &__btn.btn {
     display: none;
   }
+
+  &--reviews {
+    .services__nav {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: clamp(16px, 3vw, 24px);
+    }
+  }
+
+  @include media(tablet) {
+    &__nav {
+      margin-bottom: clamp(24px, 4vw, 32px);
+
+      .btn {
+        display: none;
+      }
+    }
+
+    .box {
+      margin-bottom: 32px;
+    }
+
+    &__btn.btn {
+      display: block;
+      background: var(--gradient-pink);
+    }
+  }
 }

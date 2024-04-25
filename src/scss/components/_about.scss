@@ -34,4 +34,38 @@
 
     text-align: center;
   }
+
+  @include media(desktop) {
+    &__img {
+      height: auto;
+      max-width: 50%;
+    }
+
+    &__content {
+      padding: 16px;
+    }
+  }
+
+  @include media(mobile-l) {
+    &__box {
+      flex-direction: column;
+    }
+
+    &__img {
+      max-width: 100%;
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 24px;
+      aspect-ratio: 5/3;
+      object-position: center 60%;
+    }
+
+    &__content {
+      padding: 0;
+    }
+
+    &__accent {
+      padding: 24px;
+    }
+  }
 }

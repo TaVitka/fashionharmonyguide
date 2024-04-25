@@ -20,11 +20,11 @@
 
     h2 {
       line-height: 1.12;
-      margin-bottom: 24px;
+      margin-bottom: clamp(16px, 3vw, 24px);
     }
 
     p {
-      margin-bottom: 24px;
+      margin-bottom: clamp(16px, 3vw, 24px);
       width: 95%;
     }
   }
@@ -32,12 +32,16 @@
   &__form {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 28px;
+    gap: clamp(16px, 3vw, 28px);
     max-width: 596px;
     width: 100%;
     padding: 34px 32px;
     background: var(--gradient-pink);
     border-radius: var(--radius-main);
+
+    label {
+      display: block;
+    }
 
     .request__textarea,
     .btn--send {
@@ -57,6 +61,67 @@
       letter-spacing: -.07rem;
       font-style: normal;
       text-transform: uppercase;
+    }
+  }
+
+  @include media(tablet-wide) {
+    &__content {
+      margin-right: 10px;
+    }
+
+    &__form {
+      gap: 16px 10px;
+      padding: 16px;
+    }
+  }
+
+  @include media(tablet) {
+    padding-bottom: 180px;
+
+    &__inner {
+      flex-direction: column;
+    }
+
+    &__content,
+    &__form {
+      max-width: 100%;
+    }
+
+    &__content {
+      margin-right: 0;
+      margin-bottom: 24px;
+
+      p {
+        width: 80%;
+      }
+    }
+  }
+
+  @include media(mobile-l) {
+    padding-bottom: 120px;
+
+    &__form {
+      grid-template-columns: 1fr;
+    }
+
+    .request__textarea,
+    .btn--send {
+      grid-column: auto;
+    }
+
+    .btn {
+      width: 100%;
+      margin-inline: 0;
+    }
+  }
+
+  @include media(mobile-m) {
+    background-size: auto;
+    background-position: bottom;
+    &__content {
+      p {
+        width: 100%;
+      }
     }
   }
 }
